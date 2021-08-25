@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* defoult-css */
+/* defoult-css */
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+
+/* css */
+.header {
+	background-color: honeydew;
+    z-index: 10;
+}
+.header-left {
+	float: left;
+    width: 30%;
+}
+.header-left img{}
+.header-left a img {
+	width: 184px;
+}
+.header-right {
+	float: right;
+    width: 70%;
+}
+.header-right ul {
+	float: right;
+}
+.header-right ul li {
+	display: inline-block;
+    position: relative;
+}
+.header-right ul li a {
+	display: inline-block;
+	padding: 15px 25px;
+	text-decoration: none;
+	font-size: 25px;
+	margin-left: -5px;
+    text-transform: capitalize;
+}
+.header-right ul li ul{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transition: .5s;
+}
+.header-right ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    transform-origin: top center;
+    background-color: yellowgreen;
+    z-index: 9999;
+
+}
+.header-right ul li ul li{
+    display: inline-block;
+   
+}
+.header-right ul li ul li a{
+    display: block;
+    
+}
+.header-right ul li:hover>a{
+    color: black;
+    transition: .5s;
+}
+
+/* slider-section */
+.slider{
+    background: url(./banner.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 250px 0;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    
+}
+.slider::before{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.431);
+    z-index: -1;
+}
+.text{
+	color: white;
+}
+
+.text h2 {
+	text-transform: capitalize;
+	font-size: 50px;
+	margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 15px
+}
+.text h2::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: yellowgreen;
+    color: black;
+    z-index: -1;
+    transition: .5s;
+    border-radius: 15px 0 0 25px;
+
+}
+.text h2:hover::before{
+    width: 50%;
+}
+
+.text h2::after{
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: yellowgreen;
+    color: black;
+    z-index: -1;
+    transition: .5s;
+    border-radius: 0 25px 25px 0;
+
+}
+
+.text h2:hover::after{
+    width: 50%;
+}
+.text h2:hover{
+    color: black;
+    transition: .5s;
+}
+.text p {
+	font-size: 45px;
+	text-transform: capitalize;
+	width: 400px;
+	margin: auto;
+}
+
+/* service-section */
+.service{}
+.service-content {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.service-content h2 {
+	font-size: 30px;
+	text-transform: capitalize;
+}
+.service-item {
+	width: 30%;
+	box-shadow: 0px 1px 5px black;
+	margin: 10px;
+	text-align: center;
+	margin-top: 30px;
+}
+.service-item span {
+	color: white;
+	background-color: teal;
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	line-height: 60px;
+	font-size: 30px;
+	border-radius: 15px 0px;
+	margin: 10px 0;
+}
+.service-item h2 {
+	font-size: 36px;
+	margin-bottom: 11px;
+}
+.service-item p {
+	margin-bottom: 20px;
+}
+
+/* footer-section */
+.footer {
+	background-color: teal;
+	margin-top: 20px;
+}
+.footer-left{
+    width: 50%;
+    float: left;
+}
+.footer-right{
+    width: 50%;
+    float: right;
+}
+.footer-left p {
+	color: white;
+	font-size: 25px;
+	line-height: 85px;
+	text-transform: capitalize;
+}
+.footer-left img {
+	width: 106px;
+	float: right;
+	margin-top: -92px;
+}
+
+.footer-right ul {
+	text-align: right;
+}
+.footer-right ul li {
+	display: inline-block;
+}
+.footer-right ul li a {
+	font-size: 41px;
+	color: white;
+	padding: 16px;
+	line-height: 87px;
+    transition: .5s;
+}
+.footer-right ul li a:hover{
+    color: rgba(231, 49, 49, 0.739);
+}
